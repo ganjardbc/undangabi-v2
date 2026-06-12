@@ -15,7 +15,7 @@ async function bootstrap(): Promise<void> {
     }),
   );
 
-  const port = Number(process.env.PORT ?? 3000);
+  const port = Number(process.env.PORT ?? 3030);
   await app.listen(port);
 }
 
