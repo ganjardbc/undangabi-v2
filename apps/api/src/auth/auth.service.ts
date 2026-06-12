@@ -78,33 +78,53 @@ export class AuthService {
       throw new UnauthorizedException('Invalid credentials');
     }
 
-    // 3. Retrieve user roles
+    // 3. Retrieve user roles and permissions
     const userRoles = await this.prisma.userRole.findMany({
       where: {
         userId: user.id,
       },
       include: {
-        role: true,
+        role: {
+          include: {
+            rolePermissions: {
+              include: {
+                permission: true,
+              },
+            },
+          },
+        },
       },
     });
 
     const roles = userRoles.map((ur) => ur.role.slug);
+    const permissions = Array.from(
+      new Set(
+        userRoles.flatMap((ur) =>
+          ur.role.rolePermissions.map((rp) => rp.permission.slug)
+        )
+      )
+    );
 
-    // 4. Generate access token
+    // 4. Generate access token including roles and permissions
     const payload = {
       sub: user.id,
       email: user.email,
       roles,
+      permissions,
     };
 
     const accessToken = await this.jwtService.signAsync(payload);
 
-    // 5. Return token and user details (excluding passwordHash)
+    // 5. Return token and user details (excluding passwordHash, including roles and permissions)
     const { passwordHash, ...userDetails } = user;
 
     return {
       accessToken,
-      user: userDetails,
+      user: {
+        ...userDetails,
+        roles,
+        permissions,
+      },
     };
   }
 

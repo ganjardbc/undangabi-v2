@@ -105,7 +105,7 @@ Development environment siap digunakan.
 Status:
 
 ```txt
-PLANNED
+DONE
 ```
 
 Goal:
@@ -136,11 +136,11 @@ Permission berjalan
 Demo Checklist:
 
 ```txt
-[ ] Register customer
-[ ] Login customer
-[ ] Login admin
-[ ] Protected route bekerja
-[ ] Permission bekerja
+[x] Register customer
+[x] Login customer
+[x] Login admin
+[x] Protected route bekerja
+[x] Permission bekerja
 ```
 
 Expected Result:

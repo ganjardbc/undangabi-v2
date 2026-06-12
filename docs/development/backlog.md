@@ -435,6 +435,12 @@ Title:
 Implement JWT Guard
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 Acceptance Criteria:
 
 ```txt
@@ -449,6 +455,12 @@ Title:
 
 ```txt
 Implement Permissions Guard
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 Acceptance Criteria:
@@ -467,6 +479,12 @@ Title:
 Create Login Page
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 Acceptance Criteria:
 
 ```txt
@@ -481,6 +499,12 @@ Title:
 
 ```txt
 Create Register Page
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 Acceptance Criteria:

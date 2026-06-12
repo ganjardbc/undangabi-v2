@@ -69,8 +69,8 @@ Last Updated:
 | Phase                       | Status      | Progress |
 | --------------------------- | ----------- | -------- |
 | Phase 0 - Foundation        | DONE        | 100%     |
-| Phase 1 - Auth & RBAC       | IN_PROGRESS | 63%      |
-| Phase 2 - Invitation Core   | NOT_STARTED | 0%       |
+| Phase 1 - Auth & RBAC       | DONE        | 100%     |
+| Phase 2 - Invitation Core   | IN_PROGRESS | 0%       |
 | Phase 3 - Event & Gallery   | NOT_STARTED | 0%       |
 | Phase 4 - Guest Management  | NOT_STARTED | 0%       |
 | Phase 5 - RSVP & Guestbook  | NOT_STARTED | 0%       |
@@ -87,8 +87,8 @@ Last Updated:
 | Milestone                   | Status      |
 | --------------------------- | ----------- |
 | M0 Foundation Ready         | DONE        |
-| M1 Authentication Ready     | IN_PROGRESS |
-| M2 Invitation Builder Ready | NOT_STARTED |
+| M1 Authentication Ready     | DONE        |
+| M2 Invitation Builder Ready | IN_PROGRESS |
 | M3 Public Invitation Ready  | NOT_STARTED |
 | M4 Guest Management Ready   | NOT_STARTED |
 | M5 RSVP Ready               | NOT_STARTED |
@@ -116,10 +116,9 @@ Setup Auth & RBAC
 ### TODO
 
 ```txt
-AUTH-008 Implement JWT Guard
-AUTH-009 Implement Permissions Guard
-AUTH-010 Create Login Page
-AUTH-011 Create Register Page
+INV-001 Create Invitation Theme Schema
+INV-002 Create Invitation Schema
+INV-003 Implement Create Invitation API
 ```
 
 ---
@@ -151,6 +150,10 @@ AUTH-004 Create Auth Module
 AUTH-005 Implement Register API
 AUTH-006 Implement Login API
 AUTH-007 Implement Current User API
+AUTH-008 Implement JWT Guard
+AUTH-009 Implement Permissions Guard
+AUTH-010 Create Login Page
+AUTH-011 Create Register Page
 ```
 
 ---
@@ -191,6 +194,10 @@ AUTH-004 Create Auth Module
 AUTH-005 Implement Register API
 AUTH-006 Implement Login API
 AUTH-007 Implement Current User API
+AUTH-008 Implement JWT Guard
+AUTH-009 Implement Permissions Guard
+AUTH-010 Create Login Page
+AUTH-011 Create Register Page
 ```
 
 ---
@@ -337,10 +344,9 @@ ACTIVE
 Priority Order:
 
 ```txt
-1. AUTH-008 Implement JWT Guard
-2. AUTH-009 Implement Permissions Guard
-3. AUTH-010 Create Login Page
-4. AUTH-011 Create Register Page
+1. INV-001 Create Invitation Theme Schema
+2. INV-002 Create Invitation Schema
+3. INV-003 Implement Create Invitation API
 ```
 
 ---
