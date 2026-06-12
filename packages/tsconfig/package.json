@@ -1,0 +1,10 @@
+{
+  "name": "@undangabi/tsconfig",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    "./base": "./base.json",
+    "./nest": "./nest.json",
+    "./vue": "./vue.json"
+  }
+}

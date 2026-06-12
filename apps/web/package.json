@@ -1,0 +1,24 @@
+{
+  "name": "undangabi-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vue-tsc -p tsconfig.json --noEmit && vite build && vite build --ssr src/entry-server.ts --outDir dist/server",
+    "test": "echo \"web: test\"",
+    "lint": "echo \"web: lint\"",
+    "typecheck": "vue-tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/server-renderer": "^3.5.38",
+    "pinia": "^3.0.4",
+    "vite": "^8.0.16",
+    "vue": "^3.5.38",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "vue-tsc": "^3.3.4"
+  }
+}
