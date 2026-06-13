@@ -4,11 +4,13 @@ import { createApp } from 'vue';
 import App from '../App.vue';
 import { router } from './global-routes';
 import { useAuthStore } from '../modules/auth/stores/auth.store';
+import { setupPrimeVue } from './global-components';
 
 const app = createApp(App);
 
 app.use(createPinia());
 app.use(router);
+setupPrimeVue(app);
 
 // Global Navigation Guard
 router.beforeEach(async (to, from, next) => {

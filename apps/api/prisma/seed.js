@@ -96,6 +96,61 @@ async function main() {
   }
 
   console.log("Role permissions seeded successfully.");
+
+  // 5. Create Seed Users
+  console.log("Seeding users...");
+  const bcrypt = require("bcryptjs");
+  const hashedPassword = bcrypt.hashSync("password123", 10);
+
+  const usersData = [
+    {
+      name: "Admin User",
+      email: "admin@undangabi.com",
+      passwordHash: hashedPassword,
+      roleSlug: "admin",
+    },
+    {
+      name: "Abi Customer",
+      email: "abi@undangabi.com",
+      passwordHash: hashedPassword,
+      roleSlug: "customer",
+    },
+    {
+      name: "Standard Customer",
+      email: "customer@undangabi.com",
+      passwordHash: hashedPassword,
+      roleSlug: "customer",
+    },
+  ];
+
+  for (const userData of usersData) {
+    const { roleSlug, ...userFields } = userData;
+    const user = await prisma.user.upsert({
+      where: { email: userFields.email },
+      update: {
+        name: userFields.name,
+        passwordHash: userFields.passwordHash,
+      },
+      create: userFields,
+    });
+
+    const role = roleSlug === "admin" ? adminRole : customerRole;
+
+    await prisma.userRole.upsert({
+      where: {
+        userId_roleId: {
+          userId: user.id,
+          roleId: role.id,
+        },
+      },
+      update: {},
+      create: {
+        userId: user.id,
+        roleId: role.id,
+      },
+    });
+  }
+  console.log("Users seeded successfully.");
 }
 
 main()
