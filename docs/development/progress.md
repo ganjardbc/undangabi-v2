@@ -45,19 +45,19 @@ IN_PROGRESS
 Current Phase:
 
 ```txt
-Phase 1 - Auth & RBAC
+Phase 4 - Guest Management
 ```
 
 Current Milestone:
 
 ```txt
-M1 - Authentication Ready
+M2 - Invitation Builder Ready
 ```
 
 Last Updated:
 
 ```txt
-2026-06-12
+2026-06-13
 ```
 
 ---
@@ -70,9 +70,9 @@ Last Updated:
 | --------------------------- | ----------- | -------- |
 | Phase 0 - Foundation        | DONE        | 100%     |
 | Phase 1 - Auth & RBAC       | DONE        | 100%     |
-| Phase 2 - Invitation Core   | IN_PROGRESS | 0%       |
+| Phase 2 - Invitation Core   | DONE        | 100%     |
 | Phase 3 - Event & Gallery   | NOT_STARTED | 0%       |
-| Phase 4 - Guest Management  | NOT_STARTED | 0%       |
+| Phase 4 - Guest Management  | IN_PROGRESS | 0%       |
 | Phase 5 - RSVP & Guestbook  | NOT_STARTED | 0%       |
 | Phase 6 - Gifts & Calendar  | NOT_STARTED | 0%       |
 | Phase 7 - QR Check-In       | NOT_STARTED | 0%       |
@@ -106,7 +106,7 @@ Last Updated:
 ## Sprint Goal
 
 ```txt
-Setup Auth & RBAC
+Setup Guest Management
 ```
 
 ---
@@ -116,9 +116,7 @@ Setup Auth & RBAC
 ### TODO
 
 ```txt
-INV-001 Create Invitation Theme Schema
-INV-002 Create Invitation Schema
-INV-003 Implement Create Invitation API
+GST-001 Create Guest Category Schema
 ```
 
 ---
@@ -134,6 +132,26 @@ None
 ### DONE
 
 ```txt
+INV-001 Create Invitation Theme Schema
+INV-002 Create Invitation Schema
+INV-003 Implement Create Invitation API
+INV-004 Implement List Invitation API
+INV-005 Implement Detail Invitation API
+INV-006 Implement Update Invitation API
+INV-007 Implement Delete Invitation API
+INV-008 Implement Publish Invitation API
+INV-009 Implement Archive Invitation API
+INV-010 Implement Duplicate Invitation API
+INV-011 Create Invitation List Page
+INV-012 Create Invitation Create Page
+INV-013 Create Invitation Builder Page
+INV-014 Implement General Builder Section
+INV-015 Implement Story Builder Section
+INV-016 Implement Cover Builder Section
+INV-017 Implement Music Builder Section
+INV-018 Implement Public Invitation Page
+INV-019 Implement SEO Metadata
+INV-020 Implement WhatsApp OG Preview
 MONO-001 Setup Monorepo Workspace
 MONO-002 Setup Shared Packages
 API-001 Setup NestJS Application
@@ -205,7 +223,26 @@ AUTH-011 Create Register Page
 ## Phase 2
 
 ```txt
-None
+INV-001 Create Invitation Theme Schema
+INV-002 Create Invitation Schema
+INV-003 Implement Create Invitation API
+INV-004 Implement List Invitation API
+INV-005 Implement Detail Invitation API
+INV-006 Implement Update Invitation API
+INV-007 Implement Delete Invitation API
+INV-008 Implement Publish Invitation API
+INV-009 Implement Archive Invitation API
+INV-010 Implement Duplicate Invitation API
+INV-011 Create Invitation List Page
+INV-012 Create Invitation Create Page
+INV-013 Create Invitation Builder Page
+INV-014 Implement General Builder Section
+INV-015 Implement Story Builder Section
+INV-016 Implement Cover Builder Section
+INV-017 Implement Music Builder Section
+INV-018 Implement Public Invitation Page
+INV-019 Implement SEO Metadata
+INV-020 Implement WhatsApp OG Preview
 ```
 
 ---
@@ -320,8 +357,8 @@ ACTIVE
 
 | Module     | Status      |
 | ---------- | ----------- |
-| Auth       | NOT_STARTED |
-| Invitation | NOT_STARTED |
+| Auth       | DONE        |
+| Invitation | IN_PROGRESS |
 | Guests     | NOT_STARTED |
 | RSVP       | NOT_STARTED |
 | Calendar   | NOT_STARTED |
@@ -334,7 +371,7 @@ ACTIVE
 ## MVP Completion
 
 ```txt
-0%
+40%
 ```
 
 ---
@@ -344,9 +381,9 @@ ACTIVE
 Priority Order:
 
 ```txt
-1. INV-001 Create Invitation Theme Schema
-2. INV-002 Create Invitation Schema
-3. INV-003 Implement Create Invitation API
+1. GST-001 Create Guest Category Schema
+2. GST-002 Create Guest Schema
+3. GST-003 Implement Guest CRUD API
 ```
 
 ---
@@ -370,6 +407,26 @@ AUTH-003 completed.
 AUTH-004 completed.
 AUTH-005 completed.
 AUTH-006 completed.
+INV-001 completed. InvitationTheme model added to schema.prisma. Migration applied.
+INV-002 completed. Invitation model added to schema.prisma. Migration applied.
+INV-003 completed. Create Invitation API implemented.
+INV-004 completed. List Invitation API implemented.
+INV-005 completed. Detail Invitation API implemented.
+INV-006 completed. Update Invitation API implemented.
+INV-007 completed. Delete Invitation API implemented (Soft Delete).
+INV-008 completed. Publish Invitation API implemented.
+INV-009 completed. Archive Invitation API implemented.
+INV-010 completed. Duplicate Invitation API implemented.
+INV-011 completed. Invitation List Page (Frontend) implemented.
+INV-012 completed. Invitation Create Page (Frontend) implemented.
+INV-013 completed. Invitation Builder Page (Frontend) implemented.
+INV-014 completed. General Builder Section implemented.
+INV-015 completed. Story Builder Section implemented.
+INV-016 completed. Cover Builder Section implemented.
+INV-017 completed. Music Builder Section implemented.
+INV-018 completed. Public Invitation Page implemented.
+INV-019 completed. SEO Metadata implemented.
+INV-020 completed. WhatsApp OG Preview implemented. Phase 2 Complete.
 ```
 
 ---

@@ -525,6 +525,12 @@ Title:
 Create Invitation Theme Schema
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-002
@@ -535,6 +541,12 @@ Title:
 Create Invitation Schema
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-003
@@ -543,6 +555,12 @@ Title:
 
 ```txt
 Implement Create Invitation API
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 Acceptance Criteria:
@@ -562,6 +580,12 @@ Title:
 Implement List Invitation API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-005
@@ -570,6 +594,12 @@ Title:
 
 ```txt
 Implement Detail Invitation API
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ---
@@ -582,6 +612,12 @@ Title:
 Implement Update Invitation API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-007
@@ -590,6 +626,12 @@ Title:
 
 ```txt
 Implement Delete Invitation API
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ---
@@ -602,6 +644,12 @@ Title:
 Implement Publish Invitation API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-009
@@ -610,6 +658,12 @@ Title:
 
 ```txt
 Implement Archive Invitation API
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ---
@@ -622,6 +676,12 @@ Title:
 Implement Duplicate Invitation API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-011
@@ -630,6 +690,12 @@ Title:
 
 ```txt
 Create Invitation List Page
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ---
@@ -642,6 +708,12 @@ Title:
 Create Invitation Create Page
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-013
@@ -650,6 +722,12 @@ Title:
 
 ```txt
 Create Invitation Builder Page
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ---
@@ -662,6 +740,12 @@ Title:
 Implement General Builder Section
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-015
@@ -670,6 +754,12 @@ Title:
 
 ```txt
 Implement Story Builder Section
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ---
@@ -682,6 +772,12 @@ Title:
 Implement Cover Builder Section
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-017
@@ -692,6 +788,12 @@ Title:
 Implement Music Builder Section
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-018
@@ -700,6 +802,12 @@ Title:
 
 ```txt
 Implement Public Invitation Page
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 Acceptance Criteria:
@@ -718,6 +826,12 @@ Title:
 Implement SEO Metadata
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## INV-020
@@ -726,6 +840,12 @@ Title:
 
 ```txt
 Implement WhatsApp OG Preview
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 Acceptance Criteria:
