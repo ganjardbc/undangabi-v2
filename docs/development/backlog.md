@@ -916,10 +916,22 @@ Implement Google Maps Section
 Create Guest Category Schema
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ## GST-002
 
 ```txt
 Create Guest Schema
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ## GST-003
@@ -928,10 +940,22 @@ Create Guest Schema
 Implement Guest CRUD API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ## GST-004
 
 ```txt
 Implement Guest Search API
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ## GST-005
@@ -940,10 +964,22 @@ Implement Guest Search API
 Implement Guest Filter API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ## GST-006
 
 ```txt
 Create Guest List Page
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ## GST-007
@@ -952,16 +988,34 @@ Create Guest List Page
 Create Guest Detail Page
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ## GST-008
 
 ```txt
 Create Guest Category Page
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ## GST-009
 
 ```txt
 Generate Personalized Link
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 Acceptance Criteria:
@@ -979,6 +1033,12 @@ Guest name displayed
 Generate Guest QR Code
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 Acceptance Criteria:
 
 ```txt
@@ -994,12 +1054,24 @@ Unique per guest
 Import Guest CSV API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ---
 
 ## GST-012
 
 ```txt
 Import Guest CSV UI
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ---

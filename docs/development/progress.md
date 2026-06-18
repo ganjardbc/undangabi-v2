@@ -45,7 +45,7 @@ IN_PROGRESS
 Current Phase:
 
 ```txt
-Phase 4 - Guest Management
+Phase 5 - RSVP & Guestbook
 ```
 
 Current Milestone:
@@ -72,7 +72,7 @@ Last Updated:
 | Phase 1 - Auth & RBAC       | DONE        | 100%     |
 | Phase 2 - Invitation Core   | DONE        | 100%     |
 | Phase 3 - Event & Gallery   | NOT_STARTED | 0%       |
-| Phase 4 - Guest Management  | IN_PROGRESS | 0%       |
+| Phase 4 - Guest Management  | DONE        | 100%     |
 | Phase 5 - RSVP & Guestbook  | NOT_STARTED | 0%       |
 | Phase 6 - Gifts & Calendar  | NOT_STARTED | 0%       |
 | Phase 7 - QR Check-In       | NOT_STARTED | 0%       |
@@ -116,7 +116,7 @@ Setup Guest Management
 ### TODO
 
 ```txt
-GST-001 Create Guest Category Schema
+RSVP-001 Create RSVP Schema
 ```
 
 ---
@@ -152,6 +152,18 @@ INV-017 Implement Music Builder Section
 INV-018 Implement Public Invitation Page
 INV-019 Implement SEO Metadata
 INV-020 Implement WhatsApp OG Preview
+GST-001 Create Guest Category Schema
+GST-002 Create Guest Schema
+GST-003 Implement Guest CRUD API
+GST-004 Implement Guest Search API
+GST-005 Implement Guest Filter API
+GST-006 Create Guest List Page
+GST-007 Create Guest Detail Page
+GST-008 Create Guest Category Page
+GST-009 Generate Personalized Link
+GST-010 Generate Guest QR Code
+GST-011 Import Guest CSV API
+GST-012 Import Guest CSV UI
 MONO-001 Setup Monorepo Workspace
 MONO-002 Setup Shared Packages
 API-001 Setup NestJS Application
@@ -258,7 +270,18 @@ None
 ## Phase 4
 
 ```txt
-None
+GST-001 Create Guest Category Schema
+GST-002 Create Guest Schema
+GST-003 Implement Guest CRUD API
+GST-004 Implement Guest Search API
+GST-005 Implement Guest Filter API
+GST-006 Create Guest List Page
+GST-007 Create Guest Detail Page
+GST-008 Create Guest Category Page
+GST-009 Generate Personalized Link
+GST-010 Generate Guest QR Code
+GST-011 Import Guest CSV API
+GST-012 Import Guest CSV UI
 ```
 
 ---
@@ -381,9 +404,9 @@ ACTIVE
 Priority Order:
 
 ```txt
-1. GST-001 Create Guest Category Schema
-2. GST-002 Create Guest Schema
-3. GST-003 Implement Guest CRUD API
+1. RSVP-001 Create RSVP Schema
+2. RSVP-002 Submit RSVP API
+3. RSVP-003 List RSVP API
 ```
 
 ---
@@ -427,6 +450,18 @@ INV-017 completed. Music Builder Section implemented.
 INV-018 completed. Public Invitation Page implemented.
 INV-019 completed. SEO Metadata implemented.
 INV-020 completed. WhatsApp OG Preview implemented. Phase 2 Complete.
+GST-001 completed. GuestCategory schema added. Migration applied.
+GST-002 completed. Guest schema added. Migration applied.
+GST-003 completed. Guest CRUD API implemented.
+GST-004 completed. Guest Search API implemented.
+GST-005 completed. Guest Filter API implemented.
+GST-006 completed. Guest List Page implemented.
+GST-007 completed. Guest Detail Page implemented.
+GST-008 completed. Guest Category Page implemented.
+GST-009 completed. Personalized Guest Link generation implemented.
+GST-010 completed. Guest QR Code generation implemented.
+GST-011 completed. Import Guest CSV API implemented.
+GST-012 completed. Import Guest CSV UI implemented. Phase 4 Complete.
 ```
 
 ---
