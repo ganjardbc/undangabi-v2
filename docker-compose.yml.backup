@@ -1,0 +1,87 @@
+services:
+  undangabi-api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: undangabi-api
+    expose:
+      - "3030"
+    environment:
+      - PORT=3030
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://devuser:delapanbelas18@dev-postgres:5432/undangabi?schema=public
+      - JWT_SECRET=supersecretjwtkeyundangabi2026
+      - JWT_EXPIRES_IN=7d
+      - API_PREFIX=api
+      - API_VERSION=v1
+      - CORS_ORIGIN=https://undangabi.ganjardev.biz.id
+    restart: always
+    networks:
+      - devbox_devnet
+    depends_on:
+      - undangabi-db-migration
+
+  undangabi-db-migration:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: undangabi-db-migration
+    environment:
+      - DATABASE_URL=postgresql://devuser:delapanbelas18@dev-postgres:5432/undangabi?schema=public
+    command: npx prisma@6.4.0 migrate deploy --schema=prisma/schema.prisma
+    networks:
+      - devbox_devnet
+    restart: on-failure
+
+  undangabi-web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    container_name: undangabi-web
+    expose:
+      - "80"
+    restart: always
+    networks:
+      - devbox_devnet
+
+  undangabi-customer:
+    build:
+      context: .
+      dockerfile: apps/customer/Dockerfile
+    container_name: undangabi-customer
+    expose:
+      - "80"
+    restart: always
+    networks:
+      - devbox_devnet
+
+  undangabi-admin:
+    build:
+      context: .
+      dockerfile: apps/admin/Dockerfile
+    container_name: undangabi-admin
+    expose:
+      - "80"
+    restart: always
+    networks:
+      - devbox_devnet
+
+  undangabi-router:
+    image: nginx:alpine
+    container_name: undangabi-router
+    volumes:
+      - ./infra/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    expose:
+      - "80"
+    restart: always
+    networks:
+      - devbox_devnet
+    depends_on:
+      - undangabi-web
+      - undangabi-customer
+      - undangabi-admin
+      - undangabi-api
+
+networks:
+  devbox_devnet:
+    external: true
