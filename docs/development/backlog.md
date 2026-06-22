@@ -1084,10 +1084,22 @@ DONE
 Create RSVP Schema
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ## RSVP-002
 
 ```txt
 Submit RSVP API
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ## RSVP-003
@@ -1096,10 +1108,22 @@ Submit RSVP API
 List RSVP API
 ```
 
+Status:
+
+```txt
+DONE
+```
+
 ## RSVP-004
 
 ```txt
 RSVP Summary API
+```
+
+Status:
+
+```txt
+DONE
 ```
 
 ## RSVP-005

@@ -10,6 +10,7 @@ import { InvitationsModule } from './invitations/invitations.module';
 import { PublicInvitationsModule } from './public-invitations/public-invitations.module';
 import { GuestsModule } from './guests/guests.module';
 import { GuestCategoriesModule } from './guest-categories/guest-categories.module';
+import { RsvpModule } from './rsvp/rsvp.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { GuestCategoriesModule } from './guest-categories/guest-categories.modul
     PublicInvitationsModule,
     GuestsModule,
     GuestCategoriesModule,
+    RsvpModule,
   ],
 })
 export class AppModule {}

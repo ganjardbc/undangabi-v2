@@ -57,7 +57,7 @@ M2 - Invitation Builder Ready
 Last Updated:
 
 ```txt
-2026-06-13
+2026-06-18
 ```
 
 ---
@@ -73,7 +73,7 @@ Last Updated:
 | Phase 2 - Invitation Core   | DONE        | 100%     |
 | Phase 3 - Event & Gallery   | NOT_STARTED | 0%       |
 | Phase 4 - Guest Management  | DONE        | 100%     |
-| Phase 5 - RSVP & Guestbook  | NOT_STARTED | 0%       |
+| Phase 5 - RSVP & Guestbook  | IN_PROGRESS | 80%      |
 | Phase 6 - Gifts & Calendar  | NOT_STARTED | 0%       |
 | Phase 7 - QR Check-In       | NOT_STARTED | 0%       |
 | Phase 8 - Analytics         | NOT_STARTED | 0%       |
@@ -91,7 +91,7 @@ Last Updated:
 | M2 Invitation Builder Ready | IN_PROGRESS |
 | M3 Public Invitation Ready  | NOT_STARTED |
 | M4 Guest Management Ready   | NOT_STARTED |
-| M5 RSVP Ready               | NOT_STARTED |
+| M5 RSVP Ready               | IN_PROGRESS |
 | M6 Event Day Ready          | NOT_STARTED |
 | M7 Gift & Calendar Ready    | NOT_STARTED |
 | M8 Analytics Ready          | NOT_STARTED |
@@ -106,7 +106,7 @@ Last Updated:
 ## Sprint Goal
 
 ```txt
-Setup Guest Management
+Implement RSVP & Guestbook
 ```
 
 ---
@@ -116,7 +116,7 @@ Setup Guest Management
 ### TODO
 
 ```txt
-RSVP-001 Create RSVP Schema
+RSVP-005 RSVP Dashboard UI
 ```
 
 ---
@@ -164,6 +164,10 @@ GST-009 Generate Personalized Link
 GST-010 Generate Guest QR Code
 GST-011 Import Guest CSV API
 GST-012 Import Guest CSV UI
+RSVP-001 Create RSVP Schema
+RSVP-002 Submit RSVP API
+RSVP-003 List RSVP API
+RSVP-004 RSVP Summary API
 MONO-001 Setup Monorepo Workspace
 MONO-002 Setup Shared Packages
 API-001 Setup NestJS Application
@@ -289,7 +293,9 @@ GST-012 Import Guest CSV UI
 ## Phase 5
 
 ```txt
-None
+RSVP-001 Create RSVP Schema
+RSVP-002 Submit RSVP API
+RSVP-003 List RSVP API
 ```
 
 ---
@@ -381,9 +387,9 @@ ACTIVE
 | Module     | Status      |
 | ---------- | ----------- |
 | Auth       | DONE        |
-| Invitation | IN_PROGRESS |
-| Guests     | NOT_STARTED |
-| RSVP       | NOT_STARTED |
+| Invitation | DONE        |
+| Guests     | DONE        |
+| RSVP       | IN_PROGRESS |
 | Calendar   | NOT_STARTED |
 | Gift       | NOT_STARTED |
 | Check-In   | NOT_STARTED |
@@ -394,7 +400,7 @@ ACTIVE
 ## MVP Completion
 
 ```txt
-40%
+50%
 ```
 
 ---
@@ -404,9 +410,9 @@ ACTIVE
 Priority Order:
 
 ```txt
-1. RSVP-001 Create RSVP Schema
-2. RSVP-002 Submit RSVP API
-3. RSVP-003 List RSVP API
+1. RSVP-005 RSVP Dashboard UI
+2. GBOOK-001 Create Guestbook Schema
+3. GBOOK-002 Submit Guestbook API
 ```
 
 ---
@@ -462,6 +468,10 @@ GST-009 completed. Personalized Guest Link generation implemented.
 GST-010 completed. Guest QR Code generation implemented.
 GST-011 completed. Import Guest CSV API implemented.
 GST-012 completed. Import Guest CSV UI implemented. Phase 4 Complete.
+RSVP-001 completed. RSVP schema added. Migration applied.
+RSVP-002 completed. Submit RSVP API implemented.
+RSVP-003 completed. List RSVP API implemented.
+RSVP-004 completed. RSVP Summary API implemented.
 ```
 
 ---

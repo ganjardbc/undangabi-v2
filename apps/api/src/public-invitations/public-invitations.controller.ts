@@ -1,6 +1,7 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { PublicInvitationsService } from './public-invitations.service';
 import { Public } from '../common/decorators/public.decorator';
+import { SubmitRsvpDto } from './dto/submit-rsvp.dto';
 
 @Controller('public/invitations')
 export class PublicInvitationsController {
@@ -24,6 +25,17 @@ export class PublicInvitationsController {
     return {
       success: true,
       message: 'Invitation meta retrieved',
+      data,
+    };
+  }
+
+  @Public()
+  @Post(':slug/rsvp')
+  async submitRsvp(@Param('slug') slug: string, @Body() dto: SubmitRsvpDto) {
+    const data = await this.publicInvitationsService.submitRsvp(slug, dto);
+    return {
+      success: true,
+      message: 'RSVP submitted successfully',
       data,
     };
   }

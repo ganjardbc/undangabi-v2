@@ -1,5 +1,6 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { PrismaService } from '../database/prisma.service';
+import { SubmitRsvpDto } from './dto/submit-rsvp.dto';
 
 @Injectable()
 export class PublicInvitationsService {
@@ -13,7 +14,6 @@ export class PublicInvitationsService {
         deletedAt: null,
       },
       include: {
-        // For now only basic info, more to come in Phase 3
         theme: true,
       },
     });
@@ -44,5 +44,48 @@ export class PublicInvitationsService {
     }
 
     return invitation;
+  }
+
+  async submitRsvp(slug: string, dto: SubmitRsvpDto) {
+    const invitation = await this.findBySlug(slug);
+
+    const guest = await this.prisma.guest.findFirst({
+      where: {
+        invitationId: invitation.id,
+        invitationToken: dto.guest_token,
+        deletedAt: null,
+      },
+    });
+
+    if (!guest) {
+      throw new BadRequestException('Invalid guest token');
+    }
+
+    return this.prisma.$transaction(async (tx) => {
+      const rsvp = await tx.rsvp.upsert({
+        where: { guestId: guest.id },
+        update: {
+          attendanceStatus: dto.attendance_status,
+          guestCount: dto.guest_count ?? 1,
+          message: dto.message,
+          submittedAt: new Date(),
+        },
+        create: {
+          guestId: guest.id,
+          invitationId: invitation.id,
+          attendanceStatus: dto.attendance_status,
+          guestCount: dto.guest_count ?? 1,
+          message: dto.message,
+          submittedAt: new Date(),
+        },
+      });
+
+      await tx.guest.update({
+        where: { id: guest.id },
+        data: { status: 'rsvp_submitted' },
+      });
+
+      return rsvp;
+    });
   }
 }

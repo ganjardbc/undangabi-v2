@@ -40,6 +40,11 @@ enum GuestStatus {
   checked_in
 }
 
+enum AttendanceStatus {
+  attending
+  not_attending
+}
+
 model User {
   id              String     @id @default(uuid()) @db.Uuid
   name            String
@@ -173,6 +178,7 @@ model Invitation {
   theme             InvitationTheme? @relation(fields: [themeId], references: [id])
   guestCategories   GuestCategory[]
   guests            Guest[]
+  rsvps             Rsvp[]
 
   @@index([userId])
   @@index([slug])
@@ -224,6 +230,7 @@ model Guest {
 
   invitation      Invitation  @relation(fields: [invitationId], references: [id])
   category        GuestCategory? @relation(fields: [categoryId], references: [id])
+  rsvp            Rsvp?
 
   @@index([invitationId])
   @@index([categoryId])
@@ -231,4 +238,25 @@ model Guest {
   @@index([phone])
   @@index([deletedAt])
   @@map("guests")
+}
+
+model Rsvp {
+  id               String           @id @default(uuid()) @db.Uuid
+  guestId          String           @unique @map("guest_id") @db.Uuid
+  invitationId     String           @map("invitation_id") @db.Uuid
+
+  attendanceStatus AttendanceStatus @map("attendance_status")
+  guestCount       Int              @default(1) @map("guest_count")
+  message          String?
+  submittedAt      DateTime         @default(now()) @map("submitted_at")
+
+  createdAt        DateTime         @default(now()) @map("created_at")
+  updatedAt        DateTime         @updatedAt @map("updated_at")
+
+  guest            Guest            @relation(fields: [guestId], references: [id])
+  invitation       Invitation       @relation(fields: [invitationId], references: [id])
+
+  @@index([invitationId])
+  @@index([attendanceStatus])
+  @@map("rsvps")
 }
