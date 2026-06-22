@@ -27,6 +27,7 @@ import { RsvpModule } from './rsvp/rsvp.module';
     GuestsModule,
     GuestCategoriesModule,
     RsvpModule,
+    GuestbookModule,
   ],
 })
 export class AppModule {}

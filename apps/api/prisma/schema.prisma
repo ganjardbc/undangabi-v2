@@ -179,6 +179,7 @@ model Invitation {
   guestCategories   GuestCategory[]
   guests            Guest[]
   rsvps             Rsvp[]
+  guestbooks        Guestbook[]
 
   @@index([userId])
   @@index([slug])
@@ -231,6 +232,7 @@ model Guest {
   invitation      Invitation  @relation(fields: [invitationId], references: [id])
   category        GuestCategory? @relation(fields: [categoryId], references: [id])
   rsvp            Rsvp?
+  guestbook       Guestbook?
 
   @@index([invitationId])
   @@index([categoryId])
@@ -259,4 +261,25 @@ model Rsvp {
   @@index([invitationId])
   @@index([attendanceStatus])
   @@map("rsvps")
+}
+
+model Guestbook {
+  id           String     @id @default(uuid()) @db.Uuid
+  invitationId String     @map("invitation_id") @db.Uuid
+  guestId      String?    @map("guest_id") @db.Uuid
+  
+  senderName   String     @map("sender_name")
+  message      String
+  isApproved   Boolean    @default(true) @map("is_approved")
+
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+  deletedAt    DateTime?  @map("deleted_at")
+
+  invitation   Invitation @relation(fields: [invitationId], references: [id])
+  guest        Guest?     @relation(fields: [guestId], references: [id])
+
+  @@index([invitationId])
+  @@index([deletedAt])
+  @@map("guestbooks")
 }

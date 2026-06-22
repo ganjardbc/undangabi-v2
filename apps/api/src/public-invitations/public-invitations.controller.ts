@@ -1,7 +1,9 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { PublicInvitationsService } from './public-invitations.service';
 import { Public } from '../common/decorators/public.decorator';
 import { SubmitRsvpDto } from './dto/submit-rsvp.dto';
+import { SubmitGuestbookDto } from './dto/submit-guestbook.dto';
+import { QueryPublicGuestbookDto } from './dto/query-public-guestbook.dto';
 
 @Controller('public/invitations')
 export class PublicInvitationsController {
@@ -37,6 +39,28 @@ export class PublicInvitationsController {
       success: true,
       message: 'RSVP submitted successfully',
       data,
+    };
+  }
+
+  @Public()
+  @Post(':slug/guestbook')
+  async submitGuestbook(@Param('slug') slug: string, @Body() dto: SubmitGuestbookDto) {
+    const data = await this.publicInvitationsService.submitGuestbook(slug, dto);
+    return {
+      success: true,
+      message: 'Guestbook entry submitted successfully',
+      data,
+    };
+  }
+
+  @Public()
+  @Get(':slug/guestbook')
+  async getGuestbook(@Param('slug') slug: string, @Query() query: QueryPublicGuestbookDto) {
+    const result = await this.publicInvitationsService.getPublicGuestbook(slug, query.page, query.limit);
+    return {
+      success: true,
+      message: 'Guestbook entries retrieved',
+      ...result,
     };
   }
 }
